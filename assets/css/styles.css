@@ -79,6 +79,7 @@
         .glass-card:hover { transform: translateY(-8px); box-shadow: 0 40px 60px -20px rgba(0,0,0,0.12); border: 1px solid rgba(197, 160, 101, 0.3); }
         .dark-glass { background: rgba(10, 10, 10, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); }
         .bento-card { position: relative; overflow: hidden; border-radius: 24px; background: #fff; border: 1px solid var(--light-gray); transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        .bento-card-dark { background: var(--text-dark); color: #fff; border-color: var(--text-dark); }
         .bento-card:hover { border-color: rgba(197, 160, 101, 0.5); box-shadow: 0 30px 60px -15px rgba(0,0,0,0.08); transform: scale(1.01); }
         .bento-card:hover .bento-icon { transform: scale(1.1) translateY(-5px); }
         .bento-icon { transition: all 0.5s ease; }
