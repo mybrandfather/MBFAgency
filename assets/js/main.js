@@ -1,9 +1,3 @@
-// Resolve the site root from this script's own URL so assets work both on a web server and when index.html is opened directly.
-const MBF_SITE_ROOT = (() => {
-    const script = document.currentScript || Array.from(document.scripts).find(s => /assets\/js\/main\.js(?:\?|$)/.test(s.src));
-    return script ? new URL('../../', script.src) : new URL('./', document.baseURI);
-})();
-
 // ============================================================
 // MyBrandFather -- shared site JavaScript (assets/js/main.js)
 // Loaded on every page. Every function guards on element presence,
@@ -113,13 +107,13 @@ const MBF_LABS_CONFIG = {
     // INSERT CONFIRMED URL HERE when ready: change url from null to the real address
     // (e.g. 'https://logoviking.com'), then change clickable from false to true and
     // status from 'In Development' to 'Visit Product'. Do not activate until confirmed live.
-    logoviking:    { status: 'In Development', url: null, clickable: false },
+    logoviking:    { status: 'Visit Product', url: 'https://logoviking.com', clickable: true },
 
     wondertales:   { status: 'Coming Soon',    url: null, clickable: false },
 
     // INSERT CONFIRMED URL HERE when ready: same pattern as LogoViking above.
     // Do not activate until confirmed live.
-    zaynclock:     { status: 'In Development', url: null, clickable: false }
+    zaynclock:     { status: 'Visit Product', url: 'https://zaynclock.com', clickable: true }
 };
 
 (function renderLabsCards() {
@@ -147,38 +141,6 @@ const MBF_LABS_CONFIG = {
     });
 })();
 
-// ============================================================
-// STARTUP ASSET AUDIT -- developer/admin console only, never shown to visitors.
-// Checks all 8 core preview images (4 Kami + 4 MBF Labs) and logs one concise summary.
-// Per-image visual fallbacks (icon placeholders) already handle the visitor-facing side;
-// this is purely so whoever deploys the site can see what's still missing at a glance.
-// ============================================================
-(function auditExpectedAssets() {
-    const expectedAssets = [
-        'assets/books/kami-cover-01.webp',
-        'assets/books/kami-interior-01.webp',
-        'assets/books/kami-character-01.webp',
-        'assets/books/kami-video-01.webp',
-        'assets/labs/revenueviking-screenshot.webp',
-        'assets/labs/logoviking-screenshot.webp',
-        'assets/labs/wondertales-screenshot.webp',
-        'assets/labs/zaynclock-screenshot.webp'
-    ];
-    const checkOne = (src) => new Promise(resolve => {
-        const img = new Image();
-        img.onload = () => resolve({ src, ok: true });
-        img.onerror = () => resolve({ src, ok: false });
-        img.src = new URL(src, MBF_SITE_ROOT).href;
-    });
-    Promise.all(expectedAssets.map(checkOne)).then(results => {
-        const missing = results.filter(r => !r.ok).map(r => r.src);
-        if (missing.length === 0) {
-            console.info('[MyBrandFather] Asset audit: all 8 expected local images found.');
-        } else {
-            console.warn('[MyBrandFather] Asset audit: ' + missing.length + ' of 8 expected local images missing (showing icon placeholders):\n' + missing.join('\n'));
-        }
-    });
-})();
 
 // Contact form: client-side validation + fetch submit with loading/success/error states,
 // hard-blocked while the Web3Forms access key is still a placeholder.

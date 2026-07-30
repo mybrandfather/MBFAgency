@@ -1,47 +1,63 @@
-# MyBrandFather Multi-Page Site
+# MyBrandFather — Bright Luxury Multipage Website
 
-## Open it
+This is the repaired production package for the bright luxury MyBrandFather design.
 
-This corrected build works in either of these ways:
+## What was fixed
 
-1. Double-click `index.html` for a quick local preview.
-2. Recommended: serve the folder locally with VS Code Live Server or:
+- Local CSS, JavaScript, image, video, page and navigation paths were converted to relative paths.
+- The site can now be previewed by double-clicking `index.html`.
+- The same files also work when deployed at the root of `https://mybrandfather.com/`.
+- Missing social, publishing and MBF Labs images were replaced with truthful branded preview assets.
+- The Open Graph image is now local and production-safe.
+- `sitemap.xml`, `robots.txt`, `.gitignore`, legal placeholders and email references were cleaned.
+- Unverified Instagram and LinkedIn claims were removed from structured data.
+- The contact form still requires a real Web3Forms access key.
+
+## Preview
+
+### Fast preview
+
+Double-click `index.html`.
+
+### Recommended full preview
+
+From this folder:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open `http://localhost:8000/`.
+Then open:
+
+```text
+http://localhost:8000/
+```
 
 ## Deployment
 
-Upload the contents of this folder—not the outer folder itself—to your web root or deploy the folder as a static site on Vercel/Netlify.
+Upload the **contents of this folder** to the repository root. Do not upload the ZIP itself and do not keep an extra wrapper folder.
 
-## Still required before a real launch
+The expected production root contains:
 
-- Replace the 8 branded placeholder images in `assets/books/` and `assets/labs/` with genuine work/screenshots.
-- Replace `WEB3FORMS_ACCESS_KEY_HERE` in `contact/index.html` with a real Web3Forms key and test delivery.
-- Confirm portfolio attribution and display permissions.
-- Confirm product statuses and URLs.
-- Replace the generated social preview image if you prefer a custom design.
+- `index.html`
+- page folders such as `about/`, `services/`, `work/`, `labs/`, `journal/`, and `contact/`
+- `assets/`
+- `404.html`
+- `robots.txt`
+- `sitemap.xml`
 
+## Manual step still required
 
-## Kami publishing and video portfolio assets
+Create a Web3Forms access key for `hello@mybrandfather.com` and replace:
 
-This version integrates real Kami work supplied by the owner:
+```text
+WEB3FORMS_ACCESS_KEY_HERE
+```
 
-- cover, interior, and character images from *Milo and the Toothbrush Adventure*
-- an animated Milo preview
-- seven additional short story-animation and cinematic concept clips
+inside:
 
-The full ebook PDF is not distributed in the website package. Only selected portfolio previews are included.
+```text
+contact/index.html
+```
 
-
-## Kami publishing portfolio integration
-
-The Milo project is presented as a portfolio preview only at:
-
-`/work/milo-and-the-toothbrush-adventure/`
-
-It includes selected cover, interior, character, and animation samples. The complete ebook PDF is intentionally not distributed through the agency website.
-
+No secret or private key is included in this package.
