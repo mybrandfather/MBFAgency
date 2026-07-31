@@ -1,0 +1,3 @@
+# Apache config for shared hosting (e.g. Hostinger).
+# Vercel and Netlify auto-detect /404.html for static sites; Apache needs this explicit directive.
+ErrorDocument 404 /404.html
