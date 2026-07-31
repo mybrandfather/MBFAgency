@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="../assets/css/styles.css?v=5">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -50,7 +50,8 @@
       "item": {
         "@type": "Product",
         "name": "LogoViking",
-        "description": "Logo and brand tooling"
+        "description": "Creator, logo, image, and brand tools",
+        "url": "https://logoviking.com"
       }
     },
     {
@@ -68,7 +69,8 @@
       "item": {
         "@type": "Product",
         "name": "ZaynClock",
-        "description": "Concept product"
+        "description": "Online clocks, timers, alarms, and productivity tools",
+        "url": "https://zaynclock.com"
       }
     }
   ]
@@ -173,9 +175,10 @@
             <div class="max-w-5xl mx-auto space-y-16">
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center reveal visible py-12 border-b border-black/5" data-product="revenueviking">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1A1A1A] to-[#333] relative flex items-center justify-center">
+                    <div class="product-preview aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1A1A1A] to-[#333] relative flex items-center justify-center">
                         <i class="fas fa-phone-volume text-5xl text-[#C5A065] labs-fallback-icon"></i>
-                        <img loading="lazy" src="../assets/labs/revenueviking-screenshot.webp" class="w-full h-full object-cover absolute inset-0" style="opacity: 0;" alt="RevenueViking product screenshot" onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';" onerror="this.style.display='none';">
+                        <img loading="lazy" src="../assets/labs/revenueviking-live.png" class="product-preview__screen product-preview__screen--left w-full h-full object-cover absolute inset-0" style="opacity: 0;" alt="RevenueViking live website" onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';" onerror="this.style.display='none';">
+                        <span class="product-preview__logo"><img src="../assets/labs/revenueviking-logo.png" alt="RevenueViking logo"></span>
                     </div>
                     <div>
                         <span class="text-xs text-[#666] uppercase tracking-wider">AI Voice Agent &middot; Home Services</span>
@@ -188,24 +191,26 @@
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center reveal visible py-12 border-b border-black/5" data-product="logoviking">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#FAFAF8] border border-black/5 relative flex items-center justify-center">
+                    <div class="product-preview aspect-[4/3] rounded-2xl overflow-hidden bg-[#FAFAF8] border border-black/5 relative flex items-center justify-center">
                         <i class="fas fa-signature text-5xl text-[#C5A065] labs-fallback-icon"></i>
-                        <img loading="lazy" src="../assets/labs/logoviking-screenshot.webp" class="w-full h-full object-cover absolute inset-0" style="opacity: 0;" alt="LogoViking product screenshot" onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';" onerror="this.style.display='none';">
+                        <img loading="lazy" src="../assets/labs/logoviking-live.png" class="product-preview__screen product-preview__screen--left w-full h-full object-cover absolute inset-0" style="opacity: 0;" alt="LogoViking live website" onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';" onerror="this.style.display='none';">
+                        <span class="product-preview__logo"><img src="../assets/labs/logoviking-logo.webp" alt="LogoViking logo"></span>
                     </div>
                     <div>
                         <span class="text-xs text-[#666] uppercase tracking-wider">Logo &amp; Brand Tools</span>
                         <h2 class="text-3xl font-semibold mt-2 mb-4 tracking-tight magnetic-text">LogoViking</h2>
-                        <p class="text-[#666] leading-relaxed mb-2"><strong class="text-[#1A1A1A]">Problem it addresses:</strong> small businesses need fast, affordable logo and brand-asset tooling.</p>
-                        <p class="text-[#666] leading-relaxed mb-2"><strong class="text-[#1A1A1A]">Focus:</strong> logo generation tools and self-serve brand asset conversion.</p>
-                        <p class="text-[#666] leading-relaxed mb-6"><strong class="text-[#1A1A1A]">Status:</strong> In development. No public URL yet.</p>
+                        <p class="text-[#666] leading-relaxed mb-2"><strong class="text-[#1A1A1A]">Problem it addresses:</strong> creators and small businesses need fast, practical visual and brand tools.</p>
+                        <p class="text-[#666] leading-relaxed mb-2"><strong class="text-[#1A1A1A]">Focus:</strong> logo, image, social, SEO, and creator utilities in one toolkit.</p>
+                        <p class="text-[#666] leading-relaxed mb-6"><strong class="text-[#1A1A1A]">Status:</strong> Live at logoviking.com.</p>
                         <span class="labs-cta inline-flex items-center gap-2 text-xs font-medium py-2 px-4 rounded-full transition-all"></span>
                     </div>
                 </div>
 
                 <div id="wondertales" class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center reveal visible py-12 border-b border-black/5" data-product="wondertales" style="scroll-margin-top: 7rem;">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#FFF8F0] border border-black/5 relative flex items-center justify-center">
+                    <div class="product-preview aspect-[4/3] rounded-2xl overflow-hidden bg-[#FFF8F0] border border-black/5 relative flex items-center justify-center">
                         <i class="fas fa-book-open text-5xl text-[#C5A065] labs-fallback-icon"></i>
-                        <img loading="lazy" src="../assets/labs/wondertales-screenshot.webp" class="w-full h-full object-cover absolute inset-0" style="opacity: 0;" alt="WonderTales Club product screenshot" onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';" onerror="this.style.display='none';">
+                        <img loading="lazy" src="../assets/books/kami-cover-01.webp" class="product-preview__screen w-full h-full object-cover absolute inset-0" style="opacity: 0;" alt="Milo and the Toothbrush Adventure cover for WonderTales Club" onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';" onerror="this.style.display='none';">
+                        <span class="product-preview__logo product-preview__logo--art"><img src="../assets/labs/wondertales-badge.webp" alt="WonderTales character artwork"></span>
                     </div>
                     <div>
                         <span class="text-xs text-[#666] uppercase tracking-wider">Independent Publishing</span>
@@ -218,14 +223,17 @@
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center reveal visible py-12" data-product="zaynclock">
-                    <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] relative flex items-center justify-center">
+                    <div class="product-preview aspect-[4/3] rounded-2xl overflow-hidden bg-[#1A1A1A] relative flex items-center justify-center">
                         <i class="fas fa-clock text-5xl text-[#C5A065] labs-fallback-icon"></i>
-                        <img loading="lazy" src="../assets/labs/zaynclock-screenshot.webp" class="w-full h-full object-cover absolute inset-0" style="opacity: 0;" alt="ZaynClock product screenshot" onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';" onerror="this.style.display='none';">
+                        <img loading="lazy" src="../assets/labs/zaynclock-live.png" class="product-preview__screen product-preview__screen--left w-full h-full object-cover absolute inset-0" style="opacity: 0;" alt="ZaynClock live website" onload="this.style.opacity='1'; this.previousElementSibling.style.display='none';" onerror="this.style.display='none';">
+                        <span class="product-preview__logo"><img src="../assets/labs/zaynclock-logo.png" alt="ZaynClock logo"></span>
                     </div>
                     <div>
-                        <span class="text-xs text-[#666] uppercase tracking-wider">Concept</span>
+                        <span class="text-xs text-[#666] uppercase tracking-wider">Time &amp; Productivity Tools</span>
                         <h2 class="text-3xl font-semibold mt-2 mb-4 tracking-tight magnetic-text">ZaynClock</h2>
-                        <p class="text-[#666] leading-relaxed mb-2"><strong class="text-[#1A1A1A]">Status:</strong> Early concept work. Details to be confirmed as development progresses.</p>
+                        <p class="text-[#666] leading-relaxed mb-2"><strong class="text-[#1A1A1A]">Problem it addresses:</strong> people need dependable time and focus tools without installing separate apps.</p>
+                        <p class="text-[#666] leading-relaxed mb-2"><strong class="text-[#1A1A1A]">Focus:</strong> clocks, timers, alarms, Pomodoro sessions, calendars, and productivity tools.</p>
+                        <p class="text-[#666] leading-relaxed mb-6"><strong class="text-[#1A1A1A]">Status:</strong> Live at zaynclock.com.</p>
                         <span class="labs-cta inline-flex items-center gap-2 text-xs font-medium py-2 px-4 rounded-full transition-all"></span>
                     </div>
                 </div>
@@ -280,9 +288,9 @@
                     <h4 class="text-sm font-semibold mb-4 text-white/80">Products (MBF Labs)</h4>
                     <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm text-white/60">
                         <a href="https://revenueviking.com" target="_blank" rel="noopener" class="hover:text-[#C5A065] transition-colors">RevenueViking <i class="fas fa-arrow-up-right-from-square text-[10px]"></i></a>
-                        <span class="text-white/30">LogoViking <span class="text-[10px] uppercase tracking-wider">(In Development)</span></span>
+                        <a href="https://logoviking.com" target="_blank" rel="noopener" class="hover:text-[#C5A065] transition-colors">LogoViking <i class="fas fa-arrow-up-right-from-square text-[10px]"></i></a>
                         <span class="text-white/30">WonderTales Club <span class="text-[10px] uppercase tracking-wider">(Coming Soon)</span></span>
-                        <span class="text-white/30">ZaynClock <span class="text-[10px] uppercase tracking-wider">(In Development)</span></span>
+                        <a href="https://zaynclock.com" target="_blank" rel="noopener" class="hover:text-[#C5A065] transition-colors">ZaynClock <i class="fas fa-arrow-up-right-from-square text-[10px]"></i></a>
                     </div>
                 </div>
             </div>
@@ -295,6 +303,6 @@
             </div>
         </div>
     </footer>
-    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/main.js?v=2" defer></script>
 </body>
 </html>

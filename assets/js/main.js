@@ -99,20 +99,16 @@ window.addEventListener('scroll', () => {
 // ============================================================
 // MBF LABS CONFIG -- the ONLY place to edit product status, CTA text, and links.
 // Do not invent URLs or statuses here -- leave `url: null` and status "In Development"/
-// "Coming Soon" until a real, confirmed URL exists. Only revenueviking.com is confirmed live.
+// "Coming Soon" until a real, confirmed URL exists. RevenueViking, LogoViking,
+// and ZaynClock are confirmed live; WonderTales remains pre-launch.
 // ============================================================
 const MBF_LABS_CONFIG = {
     revenueviking: { status: 'Visit Product', url: 'https://revenueviking.com', clickable: true },
 
-    // INSERT CONFIRMED URL HERE when ready: change url from null to the real address
-    // (e.g. 'https://logoviking.com'), then change clickable from false to true and
-    // status from 'In Development' to 'Visit Product'. Do not activate until confirmed live.
     logoviking:    { status: 'Visit Product', url: 'https://logoviking.com', clickable: true },
 
     wondertales:   { status: 'Coming Soon',    url: null, clickable: false },
 
-    // INSERT CONFIRMED URL HERE when ready: same pattern as LogoViking above.
-    // Do not activate until confirmed live.
     zaynclock:     { status: 'Visit Product', url: 'https://zaynclock.com', clickable: true }
 };
 
@@ -130,7 +126,7 @@ const MBF_LABS_CONFIG = {
             link.target = '_blank';
             link.rel = 'noopener';
             link.className = 'absolute inset-0 z-10';
-            const heading = card.querySelector('h3');
+            const heading = card.querySelector('h2, h3');
             link.setAttribute('aria-label', (heading ? heading.textContent : key) + ' -- opens in a new tab');
             card.style.position = 'relative';
             card.appendChild(link);

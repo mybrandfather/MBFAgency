@@ -84,6 +84,40 @@
         .bento-card:hover .bento-icon { transform: scale(1.1) translateY(-5px); }
         .bento-icon { transition: all 0.5s ease; }
 
+        /* MBF Labs previews: live product/site in the rectangle, product identity in the circle. */
+        .product-preview { isolation: isolate; }
+        .product-preview__screen { transition: opacity 0.3s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
+        .product-preview__screen--left { object-position: left top; }
+        .group:hover .product-preview__screen { transform: scale(1.025); }
+        .product-preview__logo {
+            position: absolute;
+            right: 18px;
+            bottom: 18px;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 84px;
+            height: 84px;
+            overflow: hidden;
+            padding: 10px;
+            border: 3px solid rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.24);
+        }
+        .product-preview__logo img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .product-preview__logo--art { padding: 0; }
+        .product-preview__logo--art img { object-fit: cover; }
+        @media (max-width: 639px) {
+            .product-preview__logo { right: 14px; bottom: 14px; width: 72px; height: 72px; }
+        }
+
         /* Capability proof panels: real portfolio work, kept separate from the service copy. */
         .capability-card__media {
             position: relative;
