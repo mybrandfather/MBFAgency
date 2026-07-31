@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="../assets/css/styles.css">
+<link rel="stylesheet" href="../assets/css/styles.css?v=6">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -132,6 +132,75 @@
                         Selected original work from the designers and artists behind MyBrandFather &mdash; spanning independent projects, studio concepts, and client work.
                     </p>
                     <!-- TODO before launch: assign accurate per-project attribution/category tags (Immo's independent work, MBF Studio projects, concept work, future client work) once confirmed with the team. Do not imply all pieces below were completed as current MyBrandFather client work. -->
+                </div>
+
+                <section class="portfolio-directory reveal visible" aria-labelledby="portfolio-directory-title">
+                    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                        <div class="max-w-3xl">
+                            <span class="text-xs font-medium text-[#C5A065] uppercase tracking-wider">Find Your Direction</span>
+                            <h2 id="portfolio-directory-title" class="mt-3 text-3xl md:text-5xl font-semibold tracking-tighter">See the kind of work you can request.</h2>
+                            <p class="mt-4 text-[#666] leading-relaxed">Browse by deliverable, then tell us which example feels closest to your company. We can adapt the direction to your audience, industry, and goals.</p>
+                        </div>
+                        <a href="../contact/index.html" class="btn-primary inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold self-start md:self-auto">Start with an example <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+
+                    <div class="portfolio-directory__filters mt-8" role="group" aria-label="Browse portfolio examples by service">
+                        <button class="portfolio-directory__filter active" type="button" data-showcase-filter="all">All Examples</button>
+                        <button class="portfolio-directory__filter" type="button" data-showcase-filter="branding">Logos &amp; Branding</button>
+                        <button class="portfolio-directory__filter" type="button" data-showcase-filter="websites">Websites</button>
+                        <button class="portfolio-directory__filter" type="button" data-showcase-filter="illustration">Illustration &amp; Characters</button>
+                        <button class="portfolio-directory__filter" type="button" data-showcase-filter="publishing">Publishing</button>
+                        <button class="portfolio-directory__filter" type="button" data-showcase-filter="print">Brochures &amp; Print</button>
+                    </div>
+
+                    <div class="portfolio-directory__grid" id="portfolio-showcase-grid">
+                        <article class="portfolio-sample" data-showcase-category="branding">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/1879eb179051101.Y3JvcCw4MDgsNjMyLDAsMA.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&amp;w=1200&amp;auto=format&amp;fit=crop';" alt="Wild Pine Coffee Company branding example"><span class="portfolio-sample__label">Coffee &amp; Hospitality</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Logo &amp; Brand Identity</p><h3 class="portfolio-sample__title">Wild Pine Coffee Co.</h3><p class="portfolio-sample__text">An emblem-led identity direction for coffee, cafés, packaging, and hospitality brands.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="branding">
+                            <div class="portfolio-sample__visual portfolio-sample__visual--contain"><img loading="lazy" src="../assets/portfolio/reel-slobs-logo.webp" alt="Reel Slobs fishing company logo"><span class="portfolio-sample__label">Outdoor &amp; Fishing</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Logo Design</p><h3 class="portfolio-sample__title">Reel Slobs</h3><p class="portfolio-sample__text">A detailed mascot-style mark for outdoor, fishing, recreation, and apparel businesses.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="branding">
+                            <div class="portfolio-sample__visual"><div class="identity-lockup"><img loading="lazy" src="../assets/labs/revenueviking-logo.png" alt="RevenueViking emblem"><strong>RevenueViking</strong><small>AI Lead Systems</small></div><span class="portfolio-sample__label">Home Services &amp; AI</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Product Identity</p><h3 class="portfolio-sample__title">RevenueViking</h3><p class="portfolio-sample__text">A memorable product identity suited to HVAC, plumbing, electrical, roofing, and service businesses.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="websites">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="../assets/capabilities/mybrandfather-home.png" alt="MyBrandFather website design"><span class="portfolio-sample__label">Creative Services</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Multipage Website</p><h3 class="portfolio-sample__title">MyBrandFather</h3><p class="portfolio-sample__text">A premium, responsive studio site with service, work, journal, legal, and conversion pages.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="websites">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="../assets/labs/revenueviking-live.png" alt="RevenueViking AI service website"><span class="portfolio-sample__label">AI &amp; Home Services</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Website &amp; Lead System</p><h3 class="portfolio-sample__title">RevenueViking</h3><p class="portfolio-sample__text">A conversion-focused product site for AI voice, missed-call response, and lead follow-up.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="websites branding">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="../assets/labs/logoviking-live.png" alt="LogoViking website and brand tools"><span class="portfolio-sample__label">Creator Tools</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Product Website</p><h3 class="portfolio-sample__title">LogoViking</h3><p class="portfolio-sample__text">A bold brand-resource product with a distinct identity and practical creative tools.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="publishing illustration">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="../assets/books/kami-cover-01.webp" alt="Milo and the Toothbrush Adventure children's book cover"><span class="portfolio-sample__label">Children &amp; Education</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Book Cover &amp; Publishing</p><h3 class="portfolio-sample__title">Milo and the Toothbrush Adventure</h3><p class="portfolio-sample__text">A colorful cover system designed to communicate story, age range, and character appeal instantly.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="illustration">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="../assets/portfolio/aramusha-character.webp" alt="Aramusha character design"><span class="portfolio-sample__label">Games &amp; Entertainment</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Character Design</p><h3 class="portfolio-sample__title">Aramusha</h3><p class="portfolio-sample__text">Detailed character artwork for games, publishing, entertainment, mascots, and story worlds.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="print publishing">
+                            <div class="portfolio-sample__visual" aria-label="Concept trifold brochure preview"><div class="brochure-concept" aria-hidden="true"><div class="brochure-concept__panel"><span class="brochure-concept__eyebrow">Services</span><span class="brochure-concept__headline">Built around your business.</span><span class="brochure-concept__lines"></span></div><div class="brochure-concept__panel"><span class="brochure-concept__eyebrow">Why Us</span><span class="brochure-concept__headline">Clear value. Strong proof.</span><span class="brochure-concept__lines"></span></div><div class="brochure-concept__panel"><span class="brochure-concept__eyebrow">Contact</span><span class="brochure-concept__headline">Ready when you are.</span><span class="brochure-concept__lines"></span></div></div><span class="portfolio-sample__label">Concept Work</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Trifold &amp; Brochure</p><h3 class="portfolio-sample__title">Company Services Brochure</h3><p class="portfolio-sample__text">A concept direction for brochures, service menus, company profiles, and leave-behinds.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                    </div>
+
+                    <div class="portfolio-trades">
+                        <div><p class="text-sm font-semibold text-[#E0C38F]">Need an industry-specific direction?</p><p class="mt-2 text-sm text-white/60 leading-relaxed">We can create a clearly labeled concept for your trade, then build the logo, website, vehicle graphics, brochure, or full brand system around it.</p></div>
+                        <div class="portfolio-trades__chips" aria-label="Available trade concept directions"><span>HVAC</span><span>Electrical</span><span>Roofing</span><span>Plumbing</span><span>Construction</span><span>Local Services</span></div>
+                    </div>
+                </section>
+
+                <div class="mt-20 mb-10 max-w-3xl reveal visible">
+                    <span class="text-xs font-medium text-[#C5A065] uppercase tracking-wider">Detailed Portfolio Archive</span>
+                    <h2 class="mt-3 text-3xl md:text-5xl font-semibold tracking-tighter">Explore more work in depth.</h2>
                 </div>
 
                 <div class="flex flex-wrap gap-3 mb-16 reveal visible" role="group" aria-label="Filter work by category">
