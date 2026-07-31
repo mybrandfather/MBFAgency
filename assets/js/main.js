@@ -339,6 +339,30 @@ document.querySelectorAll('.magnetic').forEach(el => {
     });
 })();
 
+// Compact portfolio directory filters. Cards can belong to more than one service.
+(function initPortfolioDirectoryFilters() {
+    const buttons = document.querySelectorAll('[data-showcase-filter]');
+    const cards = document.querySelectorAll('[data-showcase-category]');
+    if (!buttons.length || !cards.length) return;
+
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.dataset.showcaseFilter;
+            buttons.forEach(item => {
+                const selected = item === button;
+                item.classList.toggle('active', selected);
+                item.setAttribute('aria-pressed', String(selected));
+            });
+            cards.forEach(card => {
+                const categories = (card.dataset.showcaseCategory || '').split(/\s+/);
+                card.hidden = filter !== 'all' && !categories.includes(filter);
+            });
+        });
+    });
+
+    buttons.forEach((button, index) => button.setAttribute('aria-pressed', String(index === 0)));
+})();
+
 window.addEventListener('load', () => {
     document.querySelectorAll('.reveal').forEach(el => {
         if (el.getBoundingClientRect().top < window.innerHeight) {
