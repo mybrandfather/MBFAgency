@@ -217,7 +217,7 @@ const MBF_LABS_CONFIG = {
             if (res.ok && data.success !== false) {
                 successEl.classList.remove('hidden');
                 form.reset();
-                label.textContent = 'Send Message';
+                label.textContent = 'Tell Us What Is Slowing Your Growth';
                 icon.className = 'fas fa-check text-xs';
                 setTimeout(() => { icon.className = 'fas fa-arrow-right text-xs'; }, 2500);
             } else {
@@ -371,3 +371,43 @@ window.addEventListener('load', () => {
     });
     initMagneticHeadings();
 });
+
+
+// Lightweight conversion instrumentation.
+// Works with Google Analytics when gtag/dataLayer is present and is harmless otherwise.
+(function initConversionTracking() {
+    window.dataLayer = window.dataLayer || [];
+    function track(name, params) {
+        const payload = Object.assign({ event: name, page_path: location.pathname }, params || {});
+        if (typeof window.gtag === 'function') {
+            window.gtag('event', name, payload);
+        } else {
+            window.dataLayer.push(payload);
+        }
+    }
+    window.mbfTrack = track;
+
+    document.addEventListener('click', (e) => {
+        const link = e.target.closest('a,button');
+        if (!link) return;
+        const eventName = link.getAttribute('data-track');
+        if (eventName) track(eventName, { label: (link.textContent || '').trim().slice(0,120), href: link.getAttribute('href') || '' });
+        if (link.matches('a[href^="mailto:"]')) track('email_link_click', { href: link.getAttribute('href') });
+    });
+
+    document.querySelectorAll('form[data-track-form]').forEach((form) => {
+        let started = false;
+        form.addEventListener('input', () => {
+            if (started) return;
+            started = true;
+            track('contact_form_start', { form: form.getAttribute('data-track-form') || 'form' });
+        }, { passive: true });
+        form.addEventListener('submit', () => {
+            const service = form.querySelector('[name="service"]');
+            track('contact_form_submit_attempt', {
+                form: form.getAttribute('data-track-form') || 'form',
+                service_selected: service ? service.value : ''
+            });
+        });
+    });
+})();
