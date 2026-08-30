@@ -96,6 +96,36 @@ window.addEventListener('scroll', () => {
     });
 })();
 
+// Keep the cinematic hero controllable and respect reduced-motion preferences.
+(function initHeroFilm() {
+    const video = document.getElementById('hero-craftsman-video');
+    const toggle = document.getElementById('hero-video-toggle');
+    if (!video || !toggle) return;
+
+    const icon = toggle.querySelector('i');
+    const label = toggle.querySelector('span');
+    const setState = (paused) => {
+        toggle.setAttribute('aria-pressed', String(paused));
+        toggle.setAttribute('aria-label', paused ? 'Play hero video' : 'Pause hero video');
+        icon.className = paused ? 'fas fa-play' : 'fas fa-pause';
+        if (label) label.textContent = paused ? 'Play film' : 'Pause film';
+    };
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        video.pause();
+        setState(true);
+    }
+
+    toggle.addEventListener('click', () => {
+        if (video.paused) {
+            video.play().then(() => setState(false)).catch(() => setState(true));
+        } else {
+            video.pause();
+            setState(true);
+        }
+    });
+})();
+
 // ============================================================
 // MBF LABS CONFIG -- the ONLY place to edit product status, CTA text, and links.
 // Do not invent URLs or statuses here -- leave `url: null` and status "In Development"/
