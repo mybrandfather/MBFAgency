@@ -104,11 +104,11 @@ window.addEventListener('scroll', () => {
 
     const icon = toggle.querySelector('i');
     const label = toggle.querySelector('span');
-    const setState = (paused) => {
+    const setState = (paused, ended = false) => {
         toggle.setAttribute('aria-pressed', String(paused));
-        toggle.setAttribute('aria-label', paused ? 'Play hero video' : 'Pause hero video');
+        toggle.setAttribute('aria-label', ended ? 'Replay hero video' : (paused ? 'Play hero video' : 'Pause hero video'));
         icon.className = paused ? 'fas fa-play' : 'fas fa-pause';
-        if (label) label.textContent = paused ? 'Play film' : 'Pause film';
+        if (label) label.textContent = ended ? 'Replay film' : (paused ? 'Play film' : 'Pause film');
     };
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -118,12 +118,15 @@ window.addEventListener('scroll', () => {
 
     toggle.addEventListener('click', () => {
         if (video.paused) {
+            if (video.ended) video.currentTime = 0;
             video.play().then(() => setState(false)).catch(() => setState(true));
         } else {
             video.pause();
             setState(true);
         }
     });
+
+    video.addEventListener('ended', () => setState(true, true));
 })();
 
 // ============================================================
