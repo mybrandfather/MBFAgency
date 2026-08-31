@@ -32,6 +32,10 @@
     letter-spacing: .035em;
 }
 
+.home-cinematic .site-header > div:first-child > a.btn-gold {
+    display: flex;
+}
+
 .home-cinematic .btn-primary,
 .home-cinematic .btn-gold {
     background: var(--mbf-gold);
@@ -304,11 +308,139 @@
     border-color: var(--mbf-line);
 }
 
+.blueprint-offer__price-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.blueprint-offer__price {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: .75rem;
+    margin-top: .35rem;
+    color: var(--mbf-ink);
+    font-size: clamp(3.25rem, 6vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -.055em;
+    line-height: 1;
+}
+
+.blueprint-offer__price del {
+    color: var(--mbf-muted);
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: -.02em;
+}
+
+.blueprint-offer__note {
+    margin-top: 1rem;
+    padding-bottom: 1.1rem;
+    color: var(--mbf-muted);
+    border-bottom: 1px solid var(--mbf-line);
+    font-size: .8rem;
+    line-height: 1.55;
+}
+
+.blueprint-offer__list {
+    display: grid;
+    gap: .8rem;
+    margin-top: 1.35rem;
+    color: #4f4d48;
+}
+
+.blueprint-offer__list li {
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    gap: .7rem;
+    align-items: start;
+    line-height: 1.45;
+}
+
+.blueprint-offer__list i {
+    margin-top: .28rem;
+    color: var(--mbf-gold);
+    font-size: .68rem;
+}
+
+.blueprint-offer__credit {
+    margin-top: 1.4rem;
+    padding: 1rem 1.1rem;
+    background: rgba(199,165,106,.13);
+    border-left: 3px solid var(--mbf-gold);
+    color: #555149;
+    font-size: .82rem;
+    line-height: 1.55;
+}
+
+.blueprint-offer__credit strong {
+    color: var(--mbf-ink);
+}
+
+.blueprint-offer__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    margin-top: 1.25rem;
+    padding: .9rem 1.35rem;
+    border-radius: 999px;
+    font-size: .82rem;
+    font-weight: 600;
+}
+
 .home-cinematic footer {
     background: #080807 !important;
 }
 
+#blueprint-offer {
+    scroll-margin-top: 5rem;
+}
+
+.blueprint-page {
+    background: var(--mbf-paper);
+    color: var(--mbf-ink);
+}
+
+.blueprint-page h1,
+.blueprint-page h2,
+.blueprint-page h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.blueprint-page main > section:first-child {
+    background: #11110f !important;
+}
+
+.blueprint-page .btn-primary {
+    background: var(--mbf-gold);
+    color: #11100d;
+    border: 1px solid var(--mbf-gold);
+}
+
+.blueprint-page .bento-card {
+    background: rgba(255,255,255,.42);
+    border-color: var(--mbf-line);
+    border-radius: .4rem;
+}
+
+@media (min-width: 1024px) {
+    #blueprint-offer > div {
+        grid-template-columns: minmax(0, .92fr) minmax(28rem, 1.08fr);
+    }
+
+    .blueprint-page main > section:nth-child(2) > div {
+        grid-template-columns: minmax(0, 1fr) minmax(28rem, 1fr);
+    }
+}
+
 @media (max-width: 1023px) {
+    .home-cinematic .site-header > div:first-child > a.btn-gold {
+        display: none;
+    }
+
     .cinematic-hero {
         min-height: 48rem;
     }
@@ -331,38 +463,116 @@
 }
 
 @media (max-width: 767px) {
+    .blueprint-page main > section:first-child {
+        min-height: 0;
+        padding: 4.5rem 1.25rem;
+    }
+
+    .blueprint-page main > section:first-child img {
+        width: 11.5rem;
+        height: auto;
+        margin-bottom: 3.25rem;
+    }
+
+    .blueprint-page main > section:first-child h1 {
+        font-size: 3.15rem;
+        line-height: .94;
+    }
+
+    .blueprint-page__price > span:first-child {
+        flex-basis: 100%;
+    }
+
+    .blueprint-page main > section:not(:first-child) {
+        padding: 4.5rem 1.25rem;
+    }
+
+    .blueprint-page .bento-card {
+        padding: 1.5rem;
+    }
+
+    .home-cinematic .site-header > div:first-child {
+        min-height: 4.75rem;
+        padding: .5rem 1rem;
+    }
+
     .home-cinematic .site-header img {
-        height: 3.4rem;
+        width: min(12rem, 66vw);
+        height: auto;
+    }
+
+    .home-cinematic #mobile-menu-toggle {
+        display: grid;
+        place-items: center;
+        width: 2.75rem;
+        height: 2.75rem;
+        flex: 0 0 auto;
     }
 
     .cinematic-hero {
-        min-height: 49rem;
-        align-items: flex-end;
-        padding: 7.5rem 1.25rem 5.5rem;
+        display: block;
+        min-height: 0;
+        padding: 0;
+    }
+
+    .cinematic-hero__media {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        margin-top: 4.75rem;
     }
 
     .cinematic-hero__media video {
-        object-position: 63% center;
+        object-position: 66% center;
     }
 
     .cinematic-hero__overlay {
-        background: rgba(5,5,4,.48);
-        border-left: 72vw solid rgba(5,5,4,.34);
+        background: linear-gradient(to top, rgba(8,8,7,.72), rgba(8,8,7,.08) 55%);
+        border-left: 0;
+    }
+
+    .cinematic-hero__inner {
+        padding: 2rem 1.25rem 5.25rem;
+        background: #0a0a09;
     }
 
     .cinematic-hero__content {
         width: 100%;
     }
 
+    .cinematic-hero__eyebrow {
+        font-size: .67rem;
+        letter-spacing: .18em;
+    }
+
     .cinematic-hero__title {
-        max-width: 33rem;
-        font-size: clamp(3.2rem, 14vw, 5.1rem);
-        line-height: .86;
+        max-width: 29rem;
+        margin-top: .9rem;
+        font-size: clamp(2.65rem, 12.2vw, 3.55rem);
+        line-height: .9;
+        letter-spacing: -.045em;
+        text-wrap: pretty;
     }
 
     .cinematic-hero__copy {
         max-width: 31rem;
-        font-size: .88rem;
+        margin-top: 1.35rem;
+        font-size: .92rem;
+        line-height: 1.62;
+    }
+
+    .cinematic-hero__actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .7rem;
+        margin-top: 1.5rem;
+    }
+
+    .cinematic-hero__actions a {
+        width: 100%;
+        min-height: 3.35rem;
     }
 
     .hero-video-toggle span {
@@ -370,9 +580,25 @@
     }
 
     .hero-video-toggle {
+        top: 5.55rem;
+        right: 1rem;
+        bottom: auto;
         width: 2.75rem;
         justify-content: center;
         padding: .65rem;
+    }
+
+    #blueprint-offer .blueprint-offer__card {
+        padding: 1.4rem;
+    }
+
+    .blueprint-offer__price {
+        font-size: 3.5rem;
+    }
+
+    .blueprint-offer__cta {
+        width: 100%;
+        min-height: 3.25rem;
     }
 
     .home-cinematic main > section:not(.cinematic-hero),
@@ -388,6 +614,16 @@
     .integrated-services__visual img {
         aspect-ratio: 4 / 3;
         object-position: 61% center;
+    }
+}
+
+@media (max-width: 389px) {
+    .home-cinematic .site-header img {
+        width: 10.75rem;
+    }
+
+    .cinematic-hero__title {
+        font-size: 2.55rem;
     }
 }
 
