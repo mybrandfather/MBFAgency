@@ -28,7 +28,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="assets/css/styles.css?v=6">
-    <link rel="stylesheet" href="assets/css/cinematic.css?v=1">
+    <link rel="stylesheet" href="assets/css/cinematic.css?v=2">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -402,17 +402,31 @@
 
         <section id="blueprint-offer" class="py-32 px-6 bg-[#F5F5F2] border-y border-black/5">
             <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-                <div class="reveal visible">
-                    <span class="text-sm font-medium text-[#C5A065] uppercase tracking-wider">AI Brand & Automation Blueprint</span>
+                <div class="reveal visible blueprint-offer__intro">
+                    <span class="text-sm font-medium text-[#C5A065] uppercase tracking-wider">A focused first step</span>
                     <h2 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tighter text-[#1A1A1A] leading-tight">Know what to fix <span class="font-serif-lux">before</span> you spend on implementation.</h2>
-                    <p class="mt-6 text-lg text-[#666] leading-relaxed">A focused assessment for businesses that need clearer branding, a stronger website, or practical AI automation but do not want to guess where to begin.</p>
-                    <a href="blueprint/index.html" data-track="blueprint_cta" class="mt-8 inline-flex btn-primary px-8 py-4 rounded-full text-sm font-medium items-center gap-2">Get Your AI Growth Blueprint <i class="fas fa-arrow-right text-xs"></i></a>
+                    <p class="mt-6 text-lg text-[#666] leading-relaxed">Start with a focused AI Growth Blueprint before investing in a full rebuild. We review your brand, website, customer journey and workflow, then give you a practical 90-day roadmap for what to fix, automate and improve first.</p>
+                    <a href="blueprint/index.html" data-track="blueprint_cta" class="mt-8 inline-flex btn-primary px-8 py-4 rounded-full text-sm font-medium items-center gap-2">Explore the Blueprint <i class="fas fa-arrow-right text-xs"></i></a>
                 </div>
-                <div class="bento-card p-8 reveal visible">
-                    <div class="flex justify-between items-start gap-6"><div><div class="text-sm uppercase tracking-wider text-[#C5A065]">Suggested price</div><div class="mt-2 text-4xl font-semibold" data-price="blueprint">$495–$750</div></div><i class="fas fa-map text-2xl text-[#C5A065]"></i></div>
-                    <ul class="mt-8 space-y-4 text-[#666]">
-                        <li>Brand and website assessment</li><li>Workflow and lead-response assessment</li><li>Three automation opportunities</li><li>Messaging recommendations</li><li>Prioritized 90-day roadmap</li><li>Fee credited toward a qualifying implementation project</li>
+                <div class="bento-card p-8 reveal visible blueprint-offer__card">
+                    <div class="blueprint-offer__price-row">
+                        <div>
+                            <div class="text-sm uppercase tracking-wider text-[#C5A065]">Founding client price</div>
+                            <div class="blueprint-offer__price"><span data-price="blueprint">$495</span> <del data-price="blueprintRegular">$750</del></div>
+                        </div>
+                        <i class="fas fa-map text-2xl text-[#C5A065]" aria-hidden="true"></i>
+                    </div>
+                    <p class="blueprint-offer__note">A practical strategy engagement—not a full website or automation build.</p>
+                    <ul class="blueprint-offer__list">
+                        <li><i class="fas fa-check" aria-hidden="true"></i><span>Brand and website conversion review</span></li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i><span>Customer journey and lead-response review</span></li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i><span>Three practical automation opportunities</span></li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i><span>Messaging and offer recommendations</span></li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i><span>Prioritized 90-day action roadmap</span></li>
+                        <li><i class="fas fa-check" aria-hidden="true"></i><span>30-minute walkthrough call</span></li>
                     </ul>
+                    <div class="blueprint-offer__credit"><strong>Your $495 is credited</strong> toward a qualifying implementation project started within 30 days.</div>
+                    <a href="contact/index.html?service=Blueprint" data-track="blueprint_cta" class="blueprint-offer__cta btn-primary">Request Your Blueprint <i class="fas fa-arrow-right text-xs"></i></a>
                 </div>
             </div>
         </section>
@@ -569,6 +583,6 @@
         </div>
     </footer>
     <script src="assets/js/main.js?v=3" defer></script>
-    <script src="assets/js/pricing.js"></script>
+    <script src="assets/js/pricing.js?v=2"></script>
 </body>
 </html>
