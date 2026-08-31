@@ -1,6 +1,7 @@
 // Central editable pricing display for commercial offers.
 window.MBF_PRICING = Object.freeze({
-  blueprint: "$495–$750",
+  blueprint: "$495",
+  blueprintRegular: "$750",
   brandSprint: "Starting at $2,500",
   leadSystem: "Starting at $4,500",
   completeSystem: "Starting at $8,500"
