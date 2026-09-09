@@ -41,7 +41,7 @@ The focused comparison is `tmp/mobile-comparison.png`. It was necessary because 
 
 - Mobile menu opened and closed; `aria-expanded` updated correctly.
 - Hero video remains autoplay, muted, plays-inline and non-looping. Pause/replay control remains functional.
-- Hero CTA targets resolve to `contact/index.html` and `work/index.html`.
+- Hero CTA targets resolve to `contact/index.html` and `portfolio/index.html`.
 - Homepage, Blueprint, Contact, Work and Services routes were opened successfully in the cloud browser.
 - Sitemap and robots files are unchanged.
 - Browser console showed no application-origin errors. Repeated metadata errors came from the cloud-browser extension and were excluded from app findings.

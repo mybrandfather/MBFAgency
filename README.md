@@ -7,7 +7,7 @@ This is the repaired production package for the bright luxury MyBrandFather desi
 - Local CSS, JavaScript, image, video, page and navigation paths were converted to relative paths.
 - The site can now be previewed by double-clicking `index.html`.
 - The same files also work when deployed at the root of `https://mybrandfather.com/`.
-- Missing social, publishing and MBF Labs images were replaced with truthful branded preview assets.
+- Missing social, publishing and MBF Lab images were replaced with truthful branded preview assets.
 - The Open Graph image is now local and production-safe.
 - `sitemap.xml`, `robots.txt`, `.gitignore`, legal placeholders and email references were cleaned.
 - Unverified Instagram and LinkedIn claims were removed from structured data.
@@ -40,7 +40,7 @@ Upload the **contents of this folder** to the repository root. Do not upload the
 The expected production root contains:
 
 - `index.html`
-- page folders such as `about/`, `services/`, `work/`, `labs/`, `journal/`, and `contact/`
+- page folders such as `about/`, `services/`, `work/`, `labs/`, and `contact/`
 - `assets/`
 - `404.html`
 - `robots.txt`

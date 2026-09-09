@@ -170,6 +170,66 @@ const MBF_LABS_CONFIG = {
     });
 })();
 
+(function initPackageTabs() {
+    const tabs = document.querySelectorAll('[data-package-tab]');
+    const panels = document.querySelectorAll('[data-package-panel]');
+    if (!tabs.length || !panels.length) return;
+
+    const categoryPackages = {
+        website: 'Website Design & Development',
+        logo: 'Logo Design',
+        illustrations: 'Illustrations',
+        branding: 'Branding',
+        ecommerce: 'E-Commerce Websites'
+    };
+
+    panels.forEach(panel => {
+        const grid = panel.querySelector('.package-grid');
+        const title = grid ? grid.dataset.packageTitle : categoryPackages[panel.dataset.packagePanel];
+        if (!grid) return;
+        grid.innerHTML = [1, 2, 3].map(level => `
+            <article class="bento-card p-7 flex flex-col">
+                <span class="text-xs font-medium text-[#C5A065] uppercase tracking-wider">Placeholder Package ${level}</span>
+                <h2 class="mt-3 text-2xl font-semibold tracking-tight">${title} Package ${level}</h2>
+                <p class="mt-3 text-sm text-[#666] leading-relaxed">Placeholder short description. Replace this with the final package positioning once details are approved.</p>
+                <div class="mt-5 text-2xl font-semibold text-[#1A1A1A]">Price placeholder</div>
+                <dl class="mt-6 space-y-3 text-sm text-[#666]">
+                    <div><dt class="font-semibold text-[#1A1A1A]">What's included</dt><dd>Placeholder inclusion list. Add final deliverables here.</dd></div>
+                    <div><dt class="font-semibold text-[#1A1A1A]">Turnaround</dt><dd>Turnaround placeholder.</dd></div>
+                    <div><dt class="font-semibold text-[#1A1A1A]">Revisions</dt><dd>Revision count placeholder.</dd></div>
+                </dl>
+                <a href="../contact/index.html?service=${encodeURIComponent(title)}" class="mt-8 btn-secondary px-6 py-3 rounded-full text-sm font-medium inline-flex items-center justify-center gap-2">Start Your Project <i class="fas fa-arrow-right text-xs"></i></a>
+            </article>
+        `).join('') + `
+            <article class="bento-card p-7 flex flex-col bg-[#1A1A1A] text-white">
+                <span class="text-xs font-medium text-[#C5A065] uppercase tracking-wider">Custom Scope</span>
+                <h2 class="mt-3 text-2xl font-semibold tracking-tight">Need something custom?</h2>
+                <p class="mt-3 text-sm text-white/60 leading-relaxed">Tell us what you are building and we will shape a custom quote around the real scope.</p>
+                <a href="../contact/index.html?service=Custom%20Quote" class="mt-auto btn-primary px-6 py-3 rounded-full text-sm font-medium inline-flex items-center justify-center gap-2">Request a Custom Quote <i class="fas fa-arrow-right text-xs"></i></a>
+            </article>
+        `;
+    });
+
+    function activatePackageTab(key) {
+        tabs.forEach(tab => {
+            const active = tab.dataset.packageTab === key;
+            tab.classList.toggle('active', active);
+            tab.setAttribute('aria-selected', String(active));
+        });
+        panels.forEach(panel => panel.classList.toggle('hidden', panel.dataset.packagePanel !== key));
+    }
+
+    tabs.forEach(tab => tab.addEventListener('click', () => {
+        activatePackageTab(tab.dataset.packageTab);
+        const url = new URL(window.location.href);
+        url.searchParams.set('category', tab.dataset.packageTab);
+        window.history.replaceState({}, '', url);
+    }));
+
+    const requested = new URLSearchParams(window.location.search).get('category');
+    activatePackageTab(categoryPackages[requested] ? requested : 'website');
+})();
+
 
 // Contact form: client-side validation + fetch submit with loading/success/error states,
 // hard-blocked while the Web3Forms access key is still a placeholder.
@@ -354,7 +414,7 @@ document.querySelectorAll('.magnetic').forEach(el => {
     });
 });
 
-// Work page category filters (no-op on pages without .work-filter-btn elements)
+// Portfolio category filters (no-op on pages without .work-filter-btn elements)
 (function initWorkFilters() {
     const buttons = document.querySelectorAll('.work-filter-btn');
     if (!buttons.length) return;
@@ -365,7 +425,8 @@ document.querySelectorAll('.magnetic').forEach(el => {
             btn.classList.add('active');
             const filter = btn.dataset.filter;
             items.forEach(item => {
-                const show = filter === 'all' || item.dataset.category === filter;
+                const categories = (item.dataset.category || '').split(/\s{2,}|,\s*| \+ /);
+                const show = filter === 'all' || categories.includes(filter) || (item.dataset.category || '').includes(filter);
                 item.style.display = show ? '' : 'none';
             });
         });

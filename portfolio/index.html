@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Selected Portfolio | MyBrandFather Creative Studio</title>
+<meta name="description" content="Selected branding, illustration, and creative work from the MyBrandFather studio and creative team." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://mybrandfather.com/portfolio/" />
+<link rel="icon" type="image/png" href="../favicon.png" />
+<link rel="apple-touch-icon" href="../favicon.png" />
+
+<!-- OPEN GRAPH -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Selected Portfolio | MyBrandFather Creative Studio" />
+<meta property="og:description" content="Selected branding, illustration, and creative work from the MyBrandFather studio and creative team." />
+<meta property="og:url" content="https://mybrandfather.com/portfolio/" />
+<meta property="og:image" content="/assets/og/mybrandfather-social.webp" />
+
+<!-- TWITTER CARD -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:title" content="Selected Portfolio | MyBrandFather Creative Studio" />
+<meta property="twitter:description" content="Selected branding, illustration, and creative work from the MyBrandFather studio and creative team." />
+<meta property="twitter:image" content="/assets/og/mybrandfather-social.webp" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../assets/css/styles.css?v=6">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Selected Portfolio | MyBrandFather",
+  "description": "A collection of selected creative work from the MyBrandFather studio.",
+  "url": "https://mybrandfather.com/portfolio/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://mybrandfather.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Portfolio",
+      "item": "https://mybrandfather.com/portfolio/"
+    }
+  ]
+}
+</script>
+</head>
+<body class="antialiased bg-[#FAFAF8]">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <div id="cta-focus-vignette" aria-hidden="true"></div>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()" aria-label="Back to top" class="stt fixed bottom-8 right-8 z-[60] group">
+        <svg class="stt-ring" width="56" height="56" viewBox="0 0 56 56" aria-hidden="true">
+            <circle class="stt-track" cx="28" cy="28" r="25" fill="none" stroke="rgba(197,160,101,0.2)" stroke-width="2"/>
+            <circle id="sttProgress" cx="28" cy="28" r="25" fill="none" stroke="#C5A065" stroke-width="2" stroke-linecap="round" transform="rotate(-90 28 28)"/>
+        </svg>
+        <span class="stt-core">
+            <i class="fas fa-arrow-up stt-arrow"></i>
+            <i class="fas fa-arrow-up stt-arrow stt-arrow-ghost"></i>
+        </span>
+    </button>
+
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-500 bg-[#0A0A0A]/90 backdrop-blur-xl border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="../index.html" class="flex items-center gap-3 group">
+                <img src="../logo.png" alt="MyBrandFather logo" class="h-16 md:h-20 w-auto" width="80" height="80"
+                     onerror="this.onerror=null;this.style.display='none';document.getElementById('logo-fallback-header').style.display='flex';" />
+                <div id="logo-fallback-header" style="display:none;" class="items-center gap-3">
+                    <span class="text-2xl font-bold tracking-tight text-[#C5A065]">MyBrandFather</span>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-10 text-sm font-medium text-white/80">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../about/index.html" class="nav-link">About</a>
+                <a href="../packages/index.html" class="nav-link">Packages</a>
+                <a href="../portfolio/index.html" class="nav-link" aria-current="page">Portfolio</a>
+                <a href="../labs/index.html" class="nav-link">MBF Lab</a>
+                <a href="../contact/index.html" class="nav-link">Contact Us</a>
+            </nav>
+
+            <a href="../contact/index.html" class="hidden lg:flex btn-gold px-6 py-2.5 rounded-full text-sm font-medium items-center gap-2 magnetic">
+                Start a Project <i class="fas fa-arrow-right text-xs"></i>
+            </a>
+
+            <button class="lg:hidden text-2xl text-white" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu" id="mobile-menu-toggle">
+                <i class="fas fa-bars" id="mobile-menu-icon"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden lg:hidden flex-col gap-4 p-6 bg-[#0A0A0A] border-t border-white/10">
+            <a href="../index.html" class="nav-link text-white">Home</a>
+            <a href="../about/index.html" class="nav-link text-white">About</a>
+            <a href="../packages/index.html" class="nav-link text-white">Packages</a>
+            <a href="../portfolio/index.html" class="nav-link text-white" aria-current="page">Portfolio</a>
+            <a href="../labs/index.html" class="nav-link text-white">MBF Lab</a>
+            <a href="../contact/index.html" class="nav-link text-white">Contact Us</a>
+            <a href="../contact/index.html" class="btn-gold px-6 py-2.5 rounded-full text-sm font-medium mt-4 inline-block text-center">Start a Project</a>
+        </div>
+    </header>
+    <main id="main-content">
+
+        <section class="pt-40 pb-8 px-6">
+            <div class="max-w-7xl mx-auto reveal visible">
+                <span class="text-sm font-medium text-[#C5A065] uppercase tracking-wider">Selected Portfolio</span>
+                <h1 class="mt-4 text-5xl md:text-7xl font-semibold tracking-tighter text-[#1A1A1A] leading-tight magnetic-text">Our Portfolio</h1>
+            </div>
+        </section>
+        <section id="portfolio" class="py-32 px-6">
+            <div class="max-w-7xl mx-auto">
+                <div class="mb-20 max-w-3xl reveal visible">
+                    <span class="text-sm font-medium text-[#C5A065] uppercase tracking-wider">Featured Portfolio</span>
+                    <h2 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tighter text-[#1A1A1A] magnetic-text">
+                        Crafted with <span class="font-serif-lux">obsessive</span> detail.
+                    </h2>
+                    <p class="mt-6 text-lg text-[#666] max-w-xl">
+                        Selected original work from the designers and artists behind MyBrandFather &mdash; spanning independent projects, studio concepts, and client work.
+                    </p>
+                    <!-- TODO before launch: assign accurate per-project attribution/category tags (Immo's independent work, MBF Studio projects, concept work, future client work) once confirmed with the team. Do not imply all pieces below were completed as current MyBrandFather client work. -->
+                </div>
+
+                <section class="portfolio-directory reveal visible" aria-labelledby="portfolio-directory-title">
+                    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+                        <div class="max-w-3xl">
+                            <span class="text-xs font-medium text-[#C5A065] uppercase tracking-wider">Find Your Direction</span>
+                            <h2 id="portfolio-directory-title" class="mt-3 text-3xl md:text-5xl font-semibold tracking-tighter">See the kind of work you can request.</h2>
+                            <p class="mt-4 text-[#666] leading-relaxed">Browse by deliverable, then tell us which example feels closest to your company. We can adapt the direction to your audience, industry, and goals.</p>
+                        </div>
+                        <a href="../contact/index.html" class="btn-primary inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold self-start md:self-auto">Start with an example <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+
+                    <div class="portfolio-directory__filters mt-8" role="group" aria-label="Browse portfolio examples by service">
+                        <button class="portfolio-directory__filter active" type="button" data-showcase-filter="all">All</button>
+                        <button class="portfolio-directory__filter" type="button" data-showcase-filter="websites">Websites</button>
+                        <button class="portfolio-directory__filter" type="button" data-showcase-filter="branding">Branding</button>
+                        <button class="portfolio-directory__filter" type="button" data-showcase-filter="logos">Logos</button>
+                        <button class="portfolio-directory__filter" type="button" data-showcase-filter="illustration">Illustration</button>
+                        <button class="portfolio-directory__filter" type="button" data-showcase-filter="ecommerce">E-Commerce</button>
+                        <button class="portfolio-directory__filter" type="button" data-showcase-filter="ai-interactive">AI &amp; Interactive</button>
+                    </div>
+
+                    <div class="portfolio-directory__grid" id="portfolio-showcase-grid">
+                        <article class="portfolio-sample" data-showcase-category="branding logos">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/1879eb179051101.Y3JvcCw4MDgsNjMyLDAsMA.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&amp;w=1200&amp;auto=format&amp;fit=crop';" alt="Wild Pine Coffee Company branding example"><span class="portfolio-sample__label">Coffee &amp; Hospitality</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Logo &amp; Brand Identity</p><h3 class="portfolio-sample__title">Wild Pine Coffee Co.</h3><p class="portfolio-sample__text">An emblem-led identity direction for coffee, cafés, packaging, and hospitality brands.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="branding logos">
+                            <div class="portfolio-sample__visual portfolio-sample__visual--contain"><img loading="lazy" src="../assets/portfolio/reel-slobs-logo.webp" alt="Reel Slobs fishing company logo"><span class="portfolio-sample__label">Outdoor &amp; Fishing</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Logo Design</p><h3 class="portfolio-sample__title">Reel Slobs</h3><p class="portfolio-sample__text">A detailed mascot-style mark for outdoor, fishing, recreation, and apparel businesses.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="branding logos ai-interactive">
+                            <div class="portfolio-sample__visual"><div class="identity-lockup"><img loading="lazy" src="../assets/labs/revenueviking-logo.png" alt="RevenueViking emblem"><strong>RevenueViking</strong><small>AI Lead Systems</small></div><span class="portfolio-sample__label">Home Services &amp; AI</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Product Identity</p><h3 class="portfolio-sample__title">RevenueViking</h3><p class="portfolio-sample__text">A memorable product identity suited to HVAC, plumbing, electrical, roofing, and service businesses.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="websites branding">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="../assets/capabilities/mybrandfather-home.png" alt="MyBrandFather website design"><span class="portfolio-sample__label">Creative Services</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Multipage Website</p><h3 class="portfolio-sample__title">MyBrandFather</h3><p class="portfolio-sample__text">A premium, responsive studio site with service, portfolio, legal, and conversion pages.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="websites ai-interactive">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="../assets/labs/revenueviking-live.png" alt="RevenueViking AI service website"><span class="portfolio-sample__label">AI &amp; Home Services</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Website &amp; Lead System</p><h3 class="portfolio-sample__title">RevenueViking</h3><p class="portfolio-sample__text">A conversion-focused product site for AI voice, missed-call response, and lead follow-up.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="websites branding logos ai-interactive">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="../assets/labs/logoviking-live.png" alt="LogoViking website and brand tools"><span class="portfolio-sample__label">Creator Tools</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Product Website</p><h3 class="portfolio-sample__title">LogoViking</h3><p class="portfolio-sample__text">A bold brand-resource product with a distinct identity and practical creative tools.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="websites ai-interactive">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="../assets/labs/zaynclock-live-v3.png" alt="ZaynClock clock, timer, alarm, and productivity website"><span class="portfolio-sample__label">Time &amp; Productivity</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Web App &amp; Tool Suite</p><h3 class="portfolio-sample__title">ZaynClock</h3><p class="portfolio-sample__text">A dark, focused utility experience for clocks, timers, alarms, world time, and productivity tools.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="illustration">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="../assets/books/kami-cover-01.webp" alt="Milo and the Toothbrush Adventure children's book cover"><span class="portfolio-sample__label">Children &amp; Education</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Book Cover &amp; Publishing</p><h3 class="portfolio-sample__title">Milo and the Toothbrush Adventure</h3><p class="portfolio-sample__text">A colorful cover system designed to communicate story, age range, and character appeal instantly.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="illustration">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="../assets/books/kami-interior-01.webp" alt="Milo children's character illustration"><span class="portfolio-sample__label">Character Illustration</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Story Character &amp; Scene</p><h3 class="portfolio-sample__title">Milo Character Artwork</h3><p class="portfolio-sample__text">Friendly character design and scene illustration for children’s books, education, activities, and family brands.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="illustration">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="../assets/portfolio/aramusha-character.webp" alt="Aramusha character design"><span class="portfolio-sample__label">Games &amp; Entertainment</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Character Design</p><h3 class="portfolio-sample__title">Aramusha</h3><p class="portfolio-sample__text">Detailed character artwork for games, publishing, entertainment, mascots, and story worlds.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="branding">
+                            <div class="portfolio-sample__visual" aria-label="Concept trifold brochure preview"><div class="brochure-concept" aria-hidden="true"><div class="brochure-concept__panel"><span class="brochure-concept__eyebrow">Packages</span><span class="brochure-concept__headline">Built around your business.</span><span class="brochure-concept__lines"></span></div><div class="brochure-concept__panel"><span class="brochure-concept__eyebrow">Why Us</span><span class="brochure-concept__headline">Clear value. Strong proof.</span><span class="brochure-concept__lines"></span></div><div class="brochure-concept__panel"><span class="brochure-concept__eyebrow">Contact Us</span><span class="brochure-concept__headline">Ready when you are.</span><span class="brochure-concept__lines"></span></div></div><span class="portfolio-sample__label">Concept Work</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Trifold &amp; Brochure</p><h3 class="portfolio-sample__title">Company Services Brochure</h3><p class="portfolio-sample__text">A concept direction for brochures, service menus, company profiles, and leave-behinds.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                        <article class="portfolio-sample" data-showcase-category="branding">
+                            <div class="portfolio-sample__visual"><img loading="lazy" src="../assets/portfolio/kami/eyecare-brochure.webp" alt="Eyecare services brochure layout"><span class="portfolio-sample__label">Healthcare &amp; Eyecare</span></div>
+                            <div class="portfolio-sample__body"><p class="portfolio-sample__meta">Brochure Design</p><h3 class="portfolio-sample__title">Eyecare Services Brochure</h3><p class="portfolio-sample__text">A clean information-led brochure for service packages, offers, locations, and customer education.</p><a class="portfolio-sample__link" href="../contact/index.html">Request this style <i class="fas fa-arrow-right text-xs"></i></a></div>
+                        </article>
+                    </div>
+
+                    <div class="portfolio-trades">
+                        <div><p class="text-sm font-semibold text-[#E0C38F]">Need an industry-specific direction?</p><p class="mt-2 text-sm text-white/60 leading-relaxed">We can create a clearly labeled concept for your trade, then build the logo, website, vehicle graphics, brochure, or full brand system around it.</p></div>
+                        <div class="portfolio-trades__chips" aria-label="Available trade concept directions"><span>HVAC</span><span>Electrical</span><span>Roofing</span><span>Plumbing</span><span>Construction</span><span>Local Services</span></div>
+                    </div>
+                </section>
+
+                <div class="mt-20 mb-10 max-w-3xl reveal visible">
+                    <span class="text-xs font-medium text-[#C5A065] uppercase tracking-wider">Detailed Portfolio Archive</span>
+                    <h2 class="mt-3 text-3xl md:text-5xl font-semibold tracking-tighter">Explore more work in depth.</h2>
+                </div>
+
+                <div class="flex flex-wrap gap-3 mb-16 reveal visible" role="group" aria-label="Filter work by category">
+                    <button class="work-filter-btn active px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider border border-[#1A1A1A]/20 transition-all" data-filter="all">All</button>
+                    <button class="work-filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider border border-[#1A1A1A]/20 transition-all" data-filter="Websites">Websites</button>
+                    <button class="work-filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider border border-[#1A1A1A]/20 transition-all" data-filter="Branding">Branding</button>
+                    <button class="work-filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider border border-[#1A1A1A]/20 transition-all" data-filter="Logos">Logos</button>
+                    <button class="work-filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider border border-[#1A1A1A]/20 transition-all" data-filter="Illustration">Illustration</button>
+                    <button class="work-filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider border border-[#1A1A1A]/20 transition-all" data-filter="E-Commerce">E-Commerce</button>
+                    <button class="work-filter-btn px-5 py-2 rounded-full text-xs font-medium uppercase tracking-wider border border-[#1A1A1A]/20 transition-all" data-filter="AI & Interactive">AI &amp; Interactive</button>
+                </div>
+
+                <div class="space-y-24" id="work-list">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Branding Logos">
+                        <div class="md:col-span-7">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/5c72ad252483127.Y3JvcCwxMzA5LDEwMjQsMTEzLDA.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Brand Identity System">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:pl-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Branding / Visual Identity</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Brand Identity System</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">Comprehensive brand identity and marketing collateral designed to establish a premium, cohesive visual language across all touchpoints.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Branding Logos">
+                        <div class="md:col-span-7 md:order-2">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/1879eb179051101.Y3JvcCw4MDgsNjMyLDAsMA.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Wild Pine Coffee Co">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:order-1 md:pr-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Packaging / Branding</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Wild Pine Coffee Co</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A nature-inspired coffee brand identity combining wilderness motifs with artisanal packaging. The emblem design evokes outdoor adventure and premium quality.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Branding Logos">
+                        <div class="md:col-span-7">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/338669178373959.Y3JvcCw0MTY4LDMyNjAsMCw0MQ.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="General Purpose Game Studio">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:pl-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Logo / Character Design</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">General Purpose Game Studio</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">Character design and branding for a modern game studio. Featuring a stylized, authoritative feline mascot that balances military precision with playful cartoon aesthetics.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Branding Logos">
+                        <div class="md:col-span-7 md:order-2">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/b847a4178284887.Y3JvcCw0MTY4LDMyNjAsMCw4MQ.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Dodge Media">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:order-1 md:pr-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Creative Agency / Branding</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Dodge Media</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A futuristic and imaginative brand identity featuring a custom TV-headed astronaut. Designed to elevate digital media experiences with a playful yet premium aesthetic.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Branding Logos">
+                        <div class="md:col-span-7">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/6fbf23177336829.Y3JvcCwxNzMzLDEzNTYsNDg5LDA.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Al Raziq">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:pl-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Luxury Branding</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Al Raziq</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A high-end, minimalist luxury brand identity. Featuring a custom golden calligraphic emblem that flows elegantly against a dark, sophisticated background.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Branding Logos">
+                        <div class="md:col-span-7 md:order-2">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/183d0c55136709.Y3JvcCwyMDA0LDE1NjksMCw3NA.png" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1546182990-dffeafbe841d?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Sher Shah">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:order-1 md:pr-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Emblem / Logo Design</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Sher Shah</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A powerful and elegant brand emblem featuring intricate gradient line art. Designed to convey strength, luxury, and heritage for a premium corporate identity.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Branding Logos">
+                        <div class="md:col-span-7">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/7a4e5358226461.Y3JvcCw2NTAsNTA5LDM3OSwxMjA.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Logo Collection I">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:pl-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Branding / Logo Marks</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Logo Collection I</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A curated selection of premium logo marks and brand symbols. Showcasing versatility across various industries, from minimalist geometry to intricate line art.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Illustration">
+                        <div class="md:col-span-7 md:order-2">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/77416b244670929.Y3JvcCwxNDAwLDEwOTUsMCwzNA.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="SK8 420 Poster Series">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:order-1 md:pr-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Illustration / Print</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">SK8 420 Poster Series</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A vibrant, edgy poster series combining street culture with custom illustration. Bold colors and dynamic compositions designed to capture attention.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Illustration">
+                        <div class="md:col-span-7">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/d8bfa3249499129.Y3JvcCwxNDAwLDEwOTUsMCwxNTI.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1535484220891-61d6914715c0?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Character Design">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:pl-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Concept Art / Illustration</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Character Design</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A meticulously crafted character design featuring detailed armor and atmospheric lighting. Created for a next-gen dark fantasy gaming IP.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Illustration">
+                        <div class="md:col-span-7 md:order-2">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/542bc8181789625.Y3JvcCwzMDY4LDI0MDAsNjMwLDA.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Secretary Donna's AI-Robot">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:order-1 md:pr-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">3D / Character Design</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Secretary Donna's AI-Robot</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A sleek, futuristic 3D robot character design. Blending friendly aesthetics with high-tech functionality, perfectly visualizing the concept of an AI assistant.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Websites AI & Interactive">
+                        <div class="md:col-span-7">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/6ebc1a177171347.Y3JvcCw3MDg0LDU1NDAsMCw2NDg.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1553531384-411a247ccd73?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Suitcase Product Design">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:pl-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Industrial / Product Design</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Suitcase Product Design</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">Detailed product design and technical illustration for a high-end hard-case suitcase. Highlighting functional features like TSA locks, spinner wheels, and cushion grip handles.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Illustration">
+                        <div class="md:col-span-7 md:order-2">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/ecfd19177075477.Y3JvcCwzNzI5LDI5MTcsOTA0LDA.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Ratfink Westside Hotwheelz">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:order-1 md:pr-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Custom Art / Illustration</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Ratfink Westside Hotwheelz</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A bold, retro-style illustration blending classic hot rod culture with street art aesthetics. A vibrant tribute to custom car culture.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Illustration">
+                        <div class="md:col-span-7">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="../assets/portfolio/reel-slobs-logo.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Reel Slobs fish logo design">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:pl-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Logo Design</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Reel Slobs — Fish Series</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A playful, stylized illustration series featuring vibrant marine life. Designed with a modern, cartoonish aesthetic perfect for apparel and digital media.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Illustration">
+                        <div class="md:col-span-7 md:order-2">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/5821e0153232251.Y3JvcCw3ODAsNjEwLDU2OSwzMA.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Spotted Sea Trout">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:order-1 md:pr-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Illustration / Print</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Spotted Sea Trout</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A beautiful, detailed illustration of a spotted sea trout. Combining scientific accuracy with a stylized, artistic presentation.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="AI & Interactive Illustration">
+                        <div class="md:col-span-7">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/ebb6c3176889211.Y3JvcCw0MTY4LDMyNjAsMCw0MQ.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1528360983277-13d401cdc186?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Samurai Avengers">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:pl-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Character Concept Art</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Samurai Avengers</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A striking character illustration blending traditional samurai aesthetics with modern comic book influences. Featuring ornate armor and dynamic posing.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="AI & Interactive Illustration">
+                        <div class="md:col-span-7 md:order-2">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/8ed24f193309333.Y3JvcCw5NTYsNzQ4LDQsMA.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1518709268805-4e9042af2176?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Hell Monster Creature">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:order-1 md:pr-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Creature Design</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Hell Monster Creature</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A fearsome creature concept illustration. Rendered in dramatic crimson tones to emphasize the harsh, volcanic environment and the imposing scale of the character.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="Illustration">
+                        <div class="md:col-span-7">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/be97bd190749077.Y3JvcCw0OTcsMzg5LDUyMiwxMDI.jpg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="The Padrius">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:pl-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Digital Illustration</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">The Padrius</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A moody, atmospheric digital painting exploring themes of fantasy and mystery. Showcasing expert lighting and composition.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="AI & Interactive Illustration">
+                        <div class="md:col-span-7 md:order-2">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="../assets/portfolio/aramusha-character.webp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Aramusha character design">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:order-1 md:pr-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Character Concept Art</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Aramusha</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A beautifully rendered character illustration featuring traditional Eastern garments and a serene, natural environment. Highlighting intricate fabric textures.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center reveal visible group work-item" data-category="AI & Interactive Illustration">
+                        <div class="md:col-span-7">
+                            <div class="aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 relative shadow-xl">
+                                <img loading="lazy" src="https://mir-s3-cdn-cf.behance.net/projects/404/055b15186215449.Y3JvcCw1MDEsMzkyLDUyMiw1OA.jpeg" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1611532736597-de2d4265fba3?q=80&w=1600&auto=format&fit=crop';" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" alt="Nobushi">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:pl-8">
+                            <span class="text-xs text-[#666] uppercase tracking-widest font-medium">Character Concept Art</span>
+                            <h3 class="text-3xl md:text-4xl font-semibold mt-4 mb-4 tracking-tight magnetic-text">Nobushi</h3>
+                                                        <span class="inline-flex items-center gap-1.5 text-[10px] font-medium text-[#C5A065] border border-[#C5A065]/30 rounded-full px-2.5 py-1 mb-4"><!-- TODO before launch: replace with a confirmed attribution -- Independent Work by Immo / Original Publishing by Kami / MBF Studio Project / MBF Product / Concept Work -- once the team confirms which category this specific piece belongs to. Defaulting to the safe generic label per brand-refinement brief until confirmed. -->Selected Portfolio by Our Creative Team</span>
+                            <p class="text-[#666] leading-relaxed mb-6">A stealthy, agile character design inspired by feudal Japanese aesthetics. The piece highlights delicate butterfly motifs and flowing garments.</p>
+                            <a href="../contact/index.html"  class="text-sm font-medium flex items-center gap-2 group text-[#1A1A1A] hover:text-[#C5A065] transition-colors">Start a Similar Project <i class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="kami-archive" class="py-32 px-6 bg-[#F5F5F2] border-t border-black/5" style="scroll-margin-top: 7rem;">
+            <div class="max-w-7xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal visible">
+                    <div class="max-w-3xl">
+                        <span class="text-sm font-medium text-[#C5A065] uppercase tracking-wider">Family Creative Archive</span>
+                        <h2 class="mt-4 text-4xl md:text-6xl font-semibold tracking-tighter text-[#1A1A1A] magnetic-text">Selected work by <span class="font-serif-lux text-[#C5A065]">Kami</span>.</h2>
+                        <p class="mt-6 text-lg text-[#666] leading-relaxed">Character art, editorial illustration, identity design, and print work by Kamran Khan (Kami), selected from his portfolio and family archive.</p>
+                    </div>
+                    <a href="https://conceptdesigner100.wixsite.com/kamran" target="_blank" rel="noopener" class="mt-6 md:mt-0 text-sm font-medium text-[#1A1A1A] hover:text-[#C5A065] transition-colors inline-flex items-center gap-2">View Kami's Portfolio <i class="fas fa-arrow-up-right-from-square text-xs"></i></a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <article class="glass-card rounded-2xl overflow-hidden reveal visible">
+                        <div class="aspect-[4/3] overflow-hidden bg-[#1A1A1A]"><img loading="lazy" src="../assets/portfolio/kami/night-scenery.webp" class="w-full h-full object-cover" alt="Night Scenery editorial illustration by Kamran Khan"></div>
+                        <div class="p-5"><span class="text-xs text-[#666] uppercase tracking-wider">Editorial Illustration</span><h3 class="text-lg font-semibold mt-1">Night Scenery</h3><p class="mt-2 text-[10px] text-[#666] uppercase tracking-wider">Archive work by Kamran Khan</p></div>
+                    </article>
+                    <article class="glass-card rounded-2xl overflow-hidden reveal visible">
+                        <div class="aspect-[4/3] overflow-hidden bg-gray-100"><img loading="lazy" src="../assets/portfolio/kami/ninja-wrath.webp" class="w-full h-full object-cover" alt="Ninja Wrath character concept by Kamran Khan"></div>
+                        <div class="p-5"><span class="text-xs text-[#666] uppercase tracking-wider">Character Concept</span><h3 class="text-lg font-semibold mt-1">Ninja Wrath</h3><p class="mt-2 text-[10px] text-[#666] uppercase tracking-wider">Archive work by Kamran Khan</p></div>
+                    </article>
+                    <article class="glass-card rounded-2xl overflow-hidden reveal visible">
+                        <div class="aspect-[4/3] overflow-hidden bg-gray-100"><img loading="lazy" src="../assets/portfolio/kami/lady-skunk.webp" class="w-full h-full object-cover" alt="Lady Skunk character development by Kamran Khan"></div>
+                        <div class="p-5"><span class="text-xs text-[#666] uppercase tracking-wider">Character Development</span><h3 class="text-lg font-semibold mt-1">Lady Skunk</h3><p class="mt-2 text-[10px] text-[#666] uppercase tracking-wider">Archive work by Kamran Khan</p></div>
+                    </article>
+                    <article class="glass-card rounded-2xl overflow-hidden reveal visible">
+                        <div class="aspect-[4/3] overflow-hidden bg-gray-100"><img loading="lazy" src="../assets/portfolio/kami/mechanic.webp" class="w-full h-full object-cover" alt="Mechanic character illustration by Kamran Khan"></div>
+                        <div class="p-5"><span class="text-xs text-[#666] uppercase tracking-wider">Character Illustration</span><h3 class="text-lg font-semibold mt-1">Mechanic</h3><p class="mt-2 text-[10px] text-[#666] uppercase tracking-wider">Archive work by Kamran Khan</p></div>
+                    </article>
+                    <article class="glass-card rounded-2xl overflow-hidden reveal visible">
+                        <div class="aspect-[4/3] overflow-hidden bg-gray-100"><img loading="lazy" src="../assets/portfolio/kami/editorial-machinery.webp" class="w-full h-full object-cover" alt="Industrial editorial illustration by Kamran Khan"></div>
+                        <div class="p-5"><span class="text-xs text-[#666] uppercase tracking-wider">Editorial Illustration</span><h3 class="text-lg font-semibold mt-1">Industrial Editorial</h3><p class="mt-2 text-[10px] text-[#666] uppercase tracking-wider">Family portfolio archive</p></div>
+                    </article>
+                    <article class="glass-card rounded-2xl overflow-hidden reveal visible">
+                        <div class="aspect-[4/3] overflow-hidden bg-gray-100"><img loading="lazy" src="../assets/portfolio/kami/skateboard-process.webp" class="w-full h-full object-cover" alt="Skateboard character sketch-to-final process by Kamran Khan"></div>
+                        <div class="p-5"><span class="text-xs text-[#666] uppercase tracking-wider">Sketch-to-Final Process</span><h3 class="text-lg font-semibold mt-1">Skateboard Character</h3><p class="mt-2 text-[10px] text-[#666] uppercase tracking-wider">Family portfolio archive</p></div>
+                    </article>
+                    <article class="glass-card rounded-2xl overflow-hidden reveal visible">
+                        <div class="aspect-[4/3] overflow-hidden bg-[#1A1A1A]"><img loading="lazy" src="../assets/portfolio/kami/creature-character.webp" class="w-full h-full object-cover" alt="Creature character study by Kamran Khan"></div>
+                        <div class="p-5"><span class="text-xs text-[#666] uppercase tracking-wider">Character Art</span><h3 class="text-lg font-semibold mt-1">Creature Character Study</h3><p class="mt-2 text-[10px] text-[#666] uppercase tracking-wider">Family portfolio archive</p></div>
+                    </article>
+                    <article class="glass-card rounded-2xl overflow-hidden reveal visible">
+                        <div class="aspect-[4/3] overflow-hidden bg-gray-100"><img loading="lazy" src="../assets/portfolio/kami/fidelis-logo.webp" class="w-full h-full object-cover" alt="Fidelis Robotic Systems identity design by Kamran Khan"></div>
+                        <div class="p-5"><span class="text-xs text-[#666] uppercase tracking-wider">Identity Design</span><h3 class="text-lg font-semibold mt-1">Fidelis Robotic Systems</h3><p class="mt-2 text-[10px] text-[#666] uppercase tracking-wider">Family portfolio archive</p></div>
+                    </article>
+                    <article class="glass-card rounded-2xl overflow-hidden reveal visible">
+                        <div class="aspect-[4/3] overflow-hidden bg-gray-100"><img loading="lazy" src="../assets/portfolio/kami/print-trifold.webp" class="w-full h-full object-cover" alt="Editorial trifold design by Kamran Khan"></div>
+                        <div class="p-5"><span class="text-xs text-[#666] uppercase tracking-wider">Print &amp; Editorial Design</span><h3 class="text-lg font-semibold mt-1">Editorial Trifold</h3><p class="mt-2 text-[10px] text-[#666] uppercase tracking-wider">Family portfolio archive</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="bg-[#0A0A0A] text-white pt-24 pb-8 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-12 pb-16 border-b border-white/10">
+                <div class="md:col-span-2">
+                    <a href="../index.html" class="flex items-center gap-3 group mb-8">
+                        <img src="../logo.png" alt="MyBrandFather logo" class="h-16 md:h-20 w-auto" width="80" height="80"
+                             onerror="this.onerror=null;this.style.display='none';document.getElementById('logo-fallback-footer').style.display='flex';" />
+                        <div id="logo-fallback-footer" style="display:none;" class="items-center gap-3">
+                            <span class="text-2xl font-bold tracking-tight text-[#C5A065]">MyBrandFather</span>
+                        </div>
+                    </a>
+                    <p class="text-white/60 max-w-sm text-sm leading-relaxed">A family-led creative technology studio building premium brands, websites, illustration, and AI-powered business systems. Originally founded in 2012. Reimagined for the AI era.</p>
+                    <div class="mt-6">
+                        <a href="https://www.facebook.com/MyBrandFatherLLC/" target="_blank" rel="noopener noreferrer" aria-label="Follow MyBrandFather on Facebook" data-track="facebook_click" class="inline-flex items-center gap-2 text-sm text-white/60 hover:text-[#C5A065] transition-colors">
+                            <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold mb-4 text-white/80">Company</h4>
+                    <ul class="space-y-3 text-sm text-white/60">
+                        <li><a href="../about/index.html" class="hover:text-[#C5A065] transition-colors">About</a></li>
+                        <li><a href="../packages/index.html" class="hover:text-[#C5A065] transition-colors">Packages</a></li>
+                        <li><a href="../portfolio/index.html" class="hover:text-[#C5A065] transition-colors">Portfolio</a></li>
+                        <li><a href="../labs/index.html" class="hover:text-[#C5A065] transition-colors">MBF Lab</a></li>
+                        <li><a href="../contact/index.html" class="hover:text-[#C5A065] transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold mb-4 text-white/80">Resources</h4>
+                    <ul class="space-y-3 text-sm text-white/60">
+                        <li><a </li>
+                        <li><a href="../index.html#faq" class="hover:text-[#C5A065] transition-colors">FAQ</a></li>
+                        <li><a href="../accessibility/index.html" class="hover:text-[#C5A065] transition-colors">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold mb-4 text-white/80">Legal</h4>
+                    <ul class="space-y-3 text-sm text-white/60">
+                        <li><a href="../privacy/index.html" class="hover:text-[#C5A065] transition-colors">Privacy Policy</a></li>
+                        <li><a href="../terms/index.html" class="hover:text-[#C5A065] transition-colors">Terms of Service</a></li>
+                        <li><a href="../cookie-policy/index.html" class="hover:text-[#C5A065] transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-10 border-b border-white/10">
+                <div class="md:col-span-4">
+                    <h4 class="text-sm font-semibold mb-4 text-white/80">Products (MBF Lab)</h4>
+                    <div class="flex flex-wrap gap-x-8 gap-y-2 text-sm text-white/60">
+                        <a href="https://revenueviking.com" target="_blank" rel="noopener" class="hover:text-[#C5A065] transition-colors">RevenueViking <i class="fas fa-arrow-up-right-from-square text-[10px]"></i></a>
+                        <span class="text-white/30">LogoViking <span class="text-[10px] uppercase tracking-wider">(In Development)</span></span>
+                        <span class="text-white/30">WonderTales Club <span class="text-[10px] uppercase tracking-wider">(Coming Soon)</span></span>
+                        <span class="text-white/30">ZaynClock <span class="text-[10px] uppercase tracking-wider">(In Development)</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-white/40">
+                <p>&copy; MyBrandFather. All rights reserved. Originally founded in 2012. Reimagined for the AI era.</p>
+                <button onclick="scrollToTop()" class="flex items-center gap-2 hover:text-[#C5A065] transition-colors mt-4 md:mt-0 cursor-pointer">
+                    Back to Top <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js" defer></script>
+</body>
+</html>
