@@ -16,9 +16,9 @@ Build date: 2026-07-30
   "/": 200,
   "/about/": 200,
   "/services/": 200,
-  "/work/": 200,
+  "/portfolio/": 200,
   "/labs/": 200,
-  "/journal/": 200,
+  "/": 200,
   "/contact/": 200,
   "/privacy/": 200,
   "/terms/": 200,
@@ -48,4 +48,4 @@ Replace `WEB3FORMS_ACCESS_KEY_HERE` in `contact/index.html` with the real Web3Fo
 
 ## Important portfolio note
 
-The generated publishing and MBF Labs images are truthful branded preview cards, not claims of completed client work. Replace them later with current owned portfolio images or product screenshots whenever available.
+The generated publishing and MBF Lab images are truthful branded preview cards, not claims of completed client work. Replace them later with current owned portfolio images or product screenshots whenever available.

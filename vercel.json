@@ -27,17 +27,17 @@
     },
     {
       "source": "/blog",
-      "destination": "/journal/",
+      "destination": "/packages/",
       "permanent": true
     },
     {
       "source": "/blog/",
-      "destination": "/journal/",
+      "destination": "/packages/",
       "permanent": true
     },
     {
       "source": "/blog/ai-receptionist-era-service-businesses.html",
-      "destination": "/journal/ai-automation-for-small-business/",
+      "destination": "/ai-automation-small-business/",
       "permanent": true
     },
     {
@@ -47,7 +47,27 @@
     },
     {
       "source": "/blog/premium-brands-refuse-price-competition.html",
-      "destination": "/journal/building-a-strong-brand-system/",
+      "destination": "/packages/",
+      "permanent": true
+    },
+    {
+      "source": "/journal",
+      "destination": "/packages/",
+      "permanent": true
+    },
+    {
+      "source": "/journal/(.*)",
+      "destination": "/packages/",
+      "permanent": true
+    },
+    {
+      "source": "/work",
+      "destination": "/portfolio/",
+      "permanent": true
+    },
+    {
+      "source": "/work/(.*)",
+      "destination": "/portfolio/",
       "permanent": true
     }
   ],

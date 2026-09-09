@@ -126,7 +126,7 @@
         .bento-card:hover .bento-icon { transform: scale(1.1) translateY(-5px); }
         .bento-icon { transition: all 0.5s ease; }
 
-        /* MBF Labs previews: live product/site in the rectangle, product identity in the circle. */
+        /* MBF Lab previews: live product/site in the rectangle, product identity in the circle. */
         .product-preview { isolation: isolate; }
         .product-preview__screen { transition: opacity 0.3s ease, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1); }
         .product-preview__screen--left { object-position: left top; }
@@ -316,6 +316,36 @@
             color: rgba(255, 255, 255, 0.5);
             font-size: 10px;
             line-height: 1.4;
+        }
+        .package-tabs {
+            overflow-x: auto;
+            padding-bottom: 8px;
+            scrollbar-width: thin;
+        }
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+        }
+        .package-grid .bento-card {
+            min-width: 0;
+        }
+        .package-grid dd {
+            margin-top: 3px;
+        }
+        @media (max-width: 1180px) {
+            .package-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 720px) {
+            .package-grid { grid-template-columns: 1fr; }
+            .package-tabs {
+                display: flex;
+                flex-wrap: nowrap;
+            }
+            .package-tabs .portfolio-directory__filter {
+                flex: 0 0 auto;
+                white-space: nowrap;
+            }
         }
         @media (max-width: 639px) {
             .publishing-card { padding: 8px; }
