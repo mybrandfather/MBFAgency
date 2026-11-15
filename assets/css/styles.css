@@ -329,7 +329,21 @@
         }
         .package-grid .bento-card {
             min-width: 0;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            overflow-wrap: anywhere;
         }
+        .package-grid h2 { margin: 12px 0; line-height: 1.25; }
+        .package-grid p { margin-bottom: 20px; }
+        .package-grid dl { margin: 24px 0; }
+        .package-grid dl > div + div { margin-top: 12px; }
+        .package-grid a { margin-top: auto; padding: 14px 20px; min-height: 48px; text-align: center; }
+        .package-grid .package-custom { background: #1A1A1A; color: #fff; }
+        .package-grid .package-custom p { color: #d6d6d6; }
+        .package-grid .package-custom a { background: #C5A065; color: #1A1A1A; }
+        .package-tabs button:focus-visible { outline: 2px solid #9a753d; outline-offset: 3px; }
+        .portfolio-empty { padding: 24px 0; color: #666; }
         .package-grid dd {
             margin-top: 3px;
         }
