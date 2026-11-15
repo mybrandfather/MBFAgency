@@ -189,19 +189,19 @@ const MBF_LABS_CONFIG = {
         if (!grid) return;
         grid.innerHTML = [1, 2, 3].map(level => `
             <article class="bento-card p-7 flex flex-col">
-                <span class="text-xs font-medium text-[#C5A065] uppercase tracking-wider">Placeholder Package ${level}</span>
+                <span class="text-xs font-medium text-[#C5A065] uppercase tracking-wider">Package ${level} - Details coming soon</span>
                 <h2 class="mt-3 text-2xl font-semibold tracking-tight">${title} Package ${level}</h2>
-                <p class="mt-3 text-sm text-[#666] leading-relaxed">Placeholder short description. Replace this with the final package positioning once details are approved.</p>
-                <div class="mt-5 text-2xl font-semibold text-[#1A1A1A]">Price placeholder</div>
+                <p class="mt-3 text-sm text-[#666] leading-relaxed">Package details are being finalized. Contact us to discuss your project in the meantime.</p>
+                <div class="mt-5 text-2xl font-semibold text-[#1A1A1A]">Pricing coming soon</div>
                 <dl class="mt-6 space-y-3 text-sm text-[#666]">
-                    <div><dt class="font-semibold text-[#1A1A1A]">What's included</dt><dd>Placeholder inclusion list. Add final deliverables here.</dd></div>
-                    <div><dt class="font-semibold text-[#1A1A1A]">Turnaround</dt><dd>Turnaround placeholder.</dd></div>
-                    <div><dt class="font-semibold text-[#1A1A1A]">Revisions</dt><dd>Revision count placeholder.</dd></div>
+                    <div><dt class="font-semibold text-[#1A1A1A]">What's included</dt><dd>Details coming soon.</dd></div>
+                    <div><dt class="font-semibold text-[#1A1A1A]">Turnaround</dt><dd>To be confirmed.</dd></div>
+                    <div><dt class="font-semibold text-[#1A1A1A]">Revisions</dt><dd>To be confirmed.</dd></div>
                 </dl>
-                <a href="../contact/index.html?service=${encodeURIComponent(title)}" class="mt-8 btn-secondary px-6 py-3 rounded-full text-sm font-medium inline-flex items-center justify-center gap-2">Start Your Project <i class="fas fa-arrow-right text-xs"></i></a>
+                <a href="../contact/index.html?service=${encodeURIComponent(title)}&package=${level}" class="mt-8 btn-secondary px-6 py-3 rounded-full text-sm font-medium inline-flex items-center justify-center gap-2">Start Your Project <i class="fas fa-arrow-right text-xs"></i></a>
             </article>
         `).join('') + `
-            <article class="bento-card p-7 flex flex-col bg-[#1A1A1A] text-white">
+            <article class="bento-card package-custom">
                 <span class="text-xs font-medium text-[#C5A065] uppercase tracking-wider">Custom Scope</span>
                 <h2 class="mt-3 text-2xl font-semibold tracking-tight">Need something custom?</h2>
                 <p class="mt-3 text-sm text-white/60 leading-relaxed">Tell us what you are building and we will shape a custom quote around the real scope.</p>
@@ -215,8 +215,16 @@ const MBF_LABS_CONFIG = {
             const active = tab.dataset.packageTab === key;
             tab.classList.toggle('active', active);
             tab.setAttribute('aria-selected', String(active));
+            tab.tabIndex = active ? 0 : -1;
+            tab.id = 'package-tab-' + tab.dataset.packageTab;
+            tab.setAttribute('aria-controls', 'package-panel-' + tab.dataset.packageTab);
         });
-        panels.forEach(panel => panel.classList.toggle('hidden', panel.dataset.packagePanel !== key));
+        panels.forEach(panel => {
+            panel.classList.toggle('hidden', panel.dataset.packagePanel !== key);
+            panel.id = 'package-panel-' + panel.dataset.packagePanel;
+            panel.setAttribute('role', 'tabpanel');
+            panel.setAttribute('aria-labelledby', 'package-tab-' + panel.dataset.packagePanel);
+        });
     }
 
     tabs.forEach(tab => tab.addEventListener('click', () => {
@@ -228,6 +236,16 @@ const MBF_LABS_CONFIG = {
 
     const requested = new URLSearchParams(window.location.search).get('category');
     activatePackageTab(categoryPackages[requested] ? requested : 'website');
+    tabs.forEach((tab, index) => tab.addEventListener('keydown', event => {
+        const keys = ['ArrowRight', 'ArrowLeft', 'Home', 'End'];
+        if (!keys.includes(event.key)) return;
+        event.preventDefault();
+        const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 :
+            (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+        tabs[next].click();
+        tabs[next].focus();
+        tabs[next].scrollIntoView({ block: 'nearest', inline: 'nearest' });
+    }));
 })();
 
 
@@ -236,6 +254,21 @@ const MBF_LABS_CONFIG = {
 (function initContactForm() {
     const form = document.getElementById('contact-form');
     if (!form) return;
+    const inquiry = new URLSearchParams(location.search);
+    const service = form.querySelector('[name="service"]');
+    const requestedService = inquiry.get('service');
+    ['Website Design & Development', 'Logo Design', 'Illustrations', 'Branding', 'E-Commerce Websites', 'Custom Quote', 'Blueprint'].forEach(name => {
+        if (service && !Array.from(service.options).some(option => option.value === name)) service.add(new Option(name, name));
+    });
+    if (service && Array.from(service.options).some(option => option.value === requestedService)) service.value = requestedService;
+    const selectedPackage = inquiry.get('package');
+    if (requestedService && service && service.value === requestedService && /^[1-3]$/.test(selectedPackage || '')) {
+        const packageInput = document.createElement('input');
+        packageInput.type = 'hidden';
+        packageInput.name = 'package_interest';
+        packageInput.value = requestedService + ' Package ' + selectedPackage + ' (details pending)';
+        form.appendChild(packageInput);
+    }
     const btn = document.getElementById('contact-submit-btn');
     const label = document.getElementById('contact-submit-label');
     const icon = document.getElementById('contact-submit-icon');
@@ -419,9 +452,15 @@ document.querySelectorAll('.magnetic').forEach(el => {
     const buttons = document.querySelectorAll('.work-filter-btn');
     if (!buttons.length) return;
     const items = document.querySelectorAll('.work-item');
+    const empty = document.createElement('p');
+    empty.className = 'portfolio-empty';
+    empty.setAttribute('role', 'status');
+    empty.hidden = true;
+    empty.textContent = 'No archive projects in this category yet. Explore another category or contact us about your project.';
+    document.getElementById('work-list').before(empty);
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
-            buttons.forEach(b => b.classList.remove('active'));
+            buttons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', String(b === btn)); });
             btn.classList.add('active');
             const filter = btn.dataset.filter;
             items.forEach(item => {
@@ -429,6 +468,7 @@ document.querySelectorAll('.magnetic').forEach(el => {
                 const show = filter === 'all' || categories.includes(filter) || (item.dataset.category || '').includes(filter);
                 item.style.display = show ? '' : 'none';
             });
+            empty.hidden = Array.from(items).some(item => item.style.display !== 'none');
         });
     });
 })();
@@ -438,6 +478,12 @@ document.querySelectorAll('.magnetic').forEach(el => {
     const buttons = document.querySelectorAll('[data-showcase-filter]');
     const cards = document.querySelectorAll('[data-showcase-category]');
     if (!buttons.length || !cards.length) return;
+    const empty = document.createElement('p');
+    empty.className = 'portfolio-empty';
+    empty.setAttribute('role', 'status');
+    empty.hidden = true;
+    empty.textContent = 'No featured projects in this category yet. Browse another category or request a custom quote.';
+    cards[0].parentElement.after(empty);
 
     buttons.forEach(button => {
         button.addEventListener('click', () => {
@@ -451,6 +497,7 @@ document.querySelectorAll('.magnetic').forEach(el => {
                 const categories = (card.dataset.showcaseCategory || '').split(/\s+/);
                 card.hidden = filter !== 'all' && !categories.includes(filter);
             });
+            empty.hidden = Array.from(cards).some(card => !card.hidden);
         });
     });
 
